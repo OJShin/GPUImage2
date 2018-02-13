@@ -106,9 +106,13 @@ public class RenderView:UIView, ImageConsumer {
         }
         self.activateDisplayFramebuffer()
         
+        // { LH
+        let viewSize = GLSize(width:GLint(round(self.bounds.size.width)), height:GLint(round(self.bounds.size.height)))
+        // LH }
+
         clearFramebufferWithColor(backgroundRenderColor)
 
-        let scaledVertices = fillMode.transformVertices(verticallyInvertedImageVertices, fromInputSize:framebuffer.sizeForTargetOrientation(self.orientation), toFitSize:backingSize)
+        let scaledVertices = fillMode.transformVertices(verticallyInvertedImageVertices, fromInputSize:framebuffer.sizeForTargetOrientation(self.orientation), toFitSize:viewSize/* toFitSize:backingSize */) // { LH }
         renderQuadWithShader(self.displayShader, vertices:scaledVertices, inputTextures:[framebuffer.texturePropertiesForTargetOrientation(self.orientation)])
         framebuffer.unlock()
         

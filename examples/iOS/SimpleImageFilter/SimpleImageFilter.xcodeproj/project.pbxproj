@@ -94,7 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				BC9E36601E525B5B00B8604F /* GPUImage.framework */,
-				BC9E36621E525B5B00B8604F /* GPUImage.xctest */,
+				BC9E36621E525B5B00B8604F /* GPUImageTests_macOS.xctest */,
 				BC9E36641E525B5B00B8604F /* GPUImage.framework */,
 				BC9E36661E525B5B00B8604F /* GPUImageTests_iOS.xctest */,
 			);
@@ -183,6 +183,7 @@
 				TargetAttributes = {
 					BCD985AB1CA43FD5001FF01F = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = D22UJEJJZM;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -219,10 +220,10 @@
 			remoteRef = BC9E365F1E525B5B00B8604F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		BC9E36621E525B5B00B8604F /* GPUImage.xctest */ = {
+		BC9E36621E525B5B00B8604F /* GPUImageTests_macOS.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = GPUImage.xctest;
+			path = GPUImageTests_macOS.xctest;
 			remoteRef = BC9E36611E525B5B00B8604F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -385,8 +386,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = D22UJEJJZM;
 				INFOPLIST_FILE = SimpleImageFilter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunsetlakesoftware.SimpleImageFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -398,8 +400,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = D22UJEJJZM;
 				INFOPLIST_FILE = SimpleImageFilter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunsetlakesoftware.SimpleImageFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
